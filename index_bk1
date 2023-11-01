@@ -1,0 +1,31 @@
+const express = require("express")
+const app = express()
+
+const port = 9101
+
+// default route
+app.get("/", function(req,res){
+    res.send("Hiii From Express")
+})
+
+app.get("/products", function(req, res){
+    res.send("Hiii From Products Express Route")
+})
+
+app.get("/details", function(req, res) {
+    res.send("Hiii From Products Details Route")
+})
+
+app.get("/category", function (req, res) {
+    res.send("Hiii From Category Route")
+})
+
+app.get("/details", function (req, res) {
+    res.send("Hiii From Category Details Route")
+})
+
+
+app.listen(port,function(err){
+    if (err) throw err;
+    console.log("Server is running on port "+port)
+})
